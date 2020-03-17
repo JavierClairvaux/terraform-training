@@ -97,7 +97,7 @@ resource "aws_security_group_rule" "allow_elb_all_outbound" {
 
 resource "aws_elb" "example" {
 
-  name = "${var.cluster_name}-asg"
+  name = "${var.cluster_name}-testing"
   availability_zones = ["us-east-2a", "us-east-2b", "us-east-2c"]
   security_groups = [aws_security_group.elb.id]
   listener {
